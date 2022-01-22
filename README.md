@@ -1,0 +1,1 @@
+# DeepL-Trick-Editor
