@@ -8,7 +8,7 @@
         <div class="container">
             <h3>Insert text here:</h3>
             <textarea class="text" id="input_box"></textarea>
-            <form class="updateButton" action="_index.php" method="post", id="processForm">
+            <form class="updateButton" action="index.php" method="post", id="processForm">
                 <input type="submit" name="Pass though Deepl Button" value="Pass though Deepl" />
             </form>
             <?php
@@ -29,7 +29,7 @@
                 
                 const setFormAction = function(txt)
                 {
-                    form.action = "_index.php?text=" + txt
+                    form.action = "index.php?text=" + txt
                 }
                 
                 const onUpdate = function(e)
