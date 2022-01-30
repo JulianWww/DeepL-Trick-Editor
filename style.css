@@ -4,19 +4,34 @@ html, body {
     display: flex;
     flex-flow: column;
 }
+h3 {
+    margin-top: 0px;
+}
 
 .container{
-    padding: 10px;
+    padding: 3px;
     height: 50%;
     border: 0px solid white;
     display: flex;
     flex-flow: column;
     flex: 0 1 auto;
+    overflow-wrap: break-word;
+}
+
+#processForm {
+    height: 100% !important;
+    display: flex !important;
+    flex-flow: column !important;
+    flex: 0 1 auto !important;
+}
+
+form {
+    height: 100% !important;
 }
   
 .container .text{
     resize: none;
-    outline: none;
+    outline: none; 
     width: 100%;
     padding: 10px;
     border: 1px solid silver;
@@ -27,12 +42,12 @@ html, body {
 
 .updateButton {
     text-align: center;
-    margin-top: 20px
+    margin-top: 10px
 }
 
 .correctedText {
     font-family: "Times New Roman", Times, serif;
-    float: left;
+    display: inline-block;
 }
 
 .correctedText.identical {
@@ -45,6 +60,10 @@ html, body {
 
 .correctedText.corrected {
     color: green;
+}
+
+.nocolor {
+    color: black !important;
 }
 
 .correctedText.original:hover .correctedText.corrected:hover {
@@ -80,4 +99,65 @@ html, body {
 .dropdown-content div:hover {background-color: #ddd}
   
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;} 
+.show {display:inline;} 
+
+.splitscreen {
+    display:flex;
+    text-align: center;
+    margin-top: 13px;
+}
+.splitscreen .element {
+    flex: 1;
+}
+
+.copy {
+    padding: 0px;
+    width: 20px;
+    height: 20px;
+}
+.copy img {
+    width: 13px;
+    height: 13px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px; 
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+.hide {
+    display: none !important;
+}
